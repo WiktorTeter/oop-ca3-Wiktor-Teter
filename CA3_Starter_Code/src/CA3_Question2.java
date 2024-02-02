@@ -1,10 +1,6 @@
 import java.util.Scanner;
 import java.util.Stack;
 
-/**
- *  Name:
- *  Class Group:
- */
 class Pair {
     int row;
     int col;
