@@ -2,30 +2,34 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.Stack;
-/**
- *  Name:
- *  Class Group:
- */
+
 public class CA3_Question4 {
 
-    /*
-        filename: name of the file to test.
-     */
-    public static boolean validate(String filename) throws FileNotFoundException
-    {
-        return false;
+    public static boolean validate(String filename) throws FileNotFoundException {
+        File file = new File(filename);
+        Scanner fileScanner = new Scanner(file);
+        Stack<String> tags = new Stack<>();
+
+        while (fileScanner.hasNextLine()) {
+            String line = fileScanner.nextLine();
+            String[] lineTags = line.split(" ");
+
+            for (String tag : lineTags) {
+                if (tag.startsWith("</")) {
+                    if (tags.isEmpty() || !tags.pop().equals(tag.replace("/", ""))) {
+                        return false;
+                    }
+                } else {
+                    tags.push(tag);
+                }
+            }
+        }
+
+        return tags.isEmpty();
     }
 
-    /*
-        This function tests the files in the files array to see if
-         they are valid.
-         tags_valid.txt should return true;
-         tags_invalid.txt should output as invalid;
-
-
-     */
     public static void main(String[] args) throws FileNotFoundException {
-        String[] files = {"tags_valid.txt", "tags_invalid.txt"};
+        String[] files = {"C:\\Users\\wikto\\oop-ca3-Wiktor-Teter\\CA3_Starter_Code\\tags_valid.txt", "C:\\Users\\wikto\\oop-ca3-Wiktor-Teter\\CA3_Starter_Code\\tags_invalid.txt"};
         for(String fName: files) {
             System.out.print(fName +": ");
             if (validate(fName)) {
