@@ -60,7 +60,7 @@ public class CA3_Question2
        int[][] arr = initializeArray();
        display(arr);
         Scanner kb = new Scanner(System.in);
-        System.out.println("Enter the starting row and column for the flood fill:");
+        System.out.println("Enter the starting row and column for the flood fill (0-9):");
         int r = kb.nextInt();
         int c = kb.nextInt();
         fill(r, c, arr);

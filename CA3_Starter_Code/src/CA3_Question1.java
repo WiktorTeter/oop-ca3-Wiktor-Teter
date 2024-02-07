@@ -23,6 +23,7 @@ public class CA3_Question1 {
                 // Retrieve car from the driveway
                 int carToRetrieve = Math.abs(input);
                 moveCarsToStreet(carToRetrieve);
+                printState();
                 retrieveCarFromDriveway(carToRetrieve);
                 moveCarsToDriveway();
             } else {
