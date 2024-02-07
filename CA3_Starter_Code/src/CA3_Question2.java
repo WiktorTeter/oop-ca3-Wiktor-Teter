@@ -1,5 +1,9 @@
 import java.util.Scanner;
 import java.util.Stack;
+/**
+ *  Name:Wiktor Teter
+ *  Class Group: SD2B
+ */
 
 class Pair {
     int row;

@@ -1,5 +1,9 @@
 import java.util.Stack;
 import java.util.Scanner;
+/**
+ *  Name:Wiktor Teter
+ *  Class Group: SD2B
+ */
 
 public class CA3_Question1 {
     private static Stack<Integer> driveway = new Stack<>();

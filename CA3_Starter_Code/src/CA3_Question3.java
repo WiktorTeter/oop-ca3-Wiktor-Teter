@@ -1,6 +1,10 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
+/**
+ *  Name:Wiktor Teter
+ *  Class Group: SD2B
+ */
 
 public class CA3_Question3 {
     public static void main(String[] args) throws FileNotFoundException {
