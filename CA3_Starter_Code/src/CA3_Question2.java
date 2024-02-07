@@ -23,7 +23,6 @@ public class CA3_Question2
     }
 
 
-
     /*
         Helper function to display the image
      */
@@ -48,10 +47,10 @@ public class CA3_Question2
 
             if (arr[cell.row][cell.col] == 0) {
                 arr[cell.row][cell.col] = fillNumber++;
-                if (cell.row > 0) stack.push(new Pair(cell.row - 1, cell.col)); // North
-                if (cell.col < arr[0].length - 1) stack.push(new Pair(cell.row, cell.col + 1)); // East
-                if (cell.row < arr.length - 1) stack.push(new Pair(cell.row + 1, cell.col)); // South
                 if (cell.col > 0) stack.push(new Pair(cell.row, cell.col - 1)); // West
+                if (cell.row < arr.length - 1) stack.push(new Pair(cell.row + 1, cell.col)); // South
+                if (cell.col < arr[0].length - 1) stack.push(new Pair(cell.row, cell.col + 1)); // East
+                if (cell.row > 0) stack.push(new Pair(cell.row - 1, cell.col)); // North
             }
         }
     }
