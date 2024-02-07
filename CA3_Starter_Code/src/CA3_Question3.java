@@ -4,7 +4,7 @@ import java.util.*;
 
 public class CA3_Question3 {
     public static void main(String[] args) throws FileNotFoundException {
-        readFile("C:\\Users\\wikto\\oop-ca3-Wiktor-Teter\\CA3_Starter_Code\\src\\CA3_Question4.java");
+        readFile("CA3_Starter_Code/src/CA3_Question4.java");
     }
 
     public static void readFile(String fileName) throws FileNotFoundException {
