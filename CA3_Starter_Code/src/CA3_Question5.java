@@ -23,14 +23,19 @@ public class CA3_Question5 {
     }
 
     public void next() {
-        if (!landingQueue.isEmpty()) {
-            System.out.println("Land: " + landingQueue.poll());
-        } else if (!takeoffQueue.isEmpty()) {
-            System.out.println("Takeoff: " + takeoffQueue.poll());
-        } else {
+        while (!landingQueue.isEmpty() || !takeoffQueue.isEmpty()) {
+            if (!landingQueue.isEmpty()) {
+                System.out.println("Land: " + landingQueue.poll());
+            } else if (!takeoffQueue.isEmpty()) {
+                System.out.println("Takeoff: " + takeoffQueue.poll());
+            }
+        }
+        if (landingQueue.isEmpty() && takeoffQueue.isEmpty()){
             System.out.println("No flights in queue.");
         }
     }
+
+
 
     public void quit() {
         System.out.println("Simulation ended.");
