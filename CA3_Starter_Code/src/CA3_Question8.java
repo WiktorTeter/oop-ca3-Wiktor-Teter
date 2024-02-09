@@ -5,7 +5,7 @@ public class CA3_Question8 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         Stack<Integer> numbers = new Stack<>();
-        System.out.println("Please enter one number or operator at a time, followed by the enter key. Enter 'q' to quit.");
+        System.out.println("Please enter one number or operator at a time, followed by the enter key. Enter 'q' to quit.\n Example:\n 5\n 3\n +\n>");
         boolean done = false;
         while (!done)
         {
